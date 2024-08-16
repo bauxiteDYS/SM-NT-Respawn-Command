@@ -63,7 +63,9 @@ public void Event_PlayerDeath(Event event, const char[] name, bool dontBroadcast
 	{
 		return;
 	}
-	
+
+	canRespawn[client] = false;
+
 	CreateTimer(DEATH_COMPLETE_SEC, Timer_PlayerDeathComplete, useridClient, TIMER_FLAG_NO_MAPCHANGE);
 }
 
