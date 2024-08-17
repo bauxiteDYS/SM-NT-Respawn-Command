@@ -46,7 +46,7 @@ public void Event_PlayerSpawn(Event event, const char[] name, bool dontBroadcast
 	int useridClient = GetEventInt(event, "userid");
 	int client = GetClientOfUserId(useridClient);
 	
-	if(client <= 0 || client >= MaxClients)
+	if(client <= 0 || client > MaxClients)
 	{
 		return;
 	}
@@ -59,7 +59,7 @@ public void Event_PlayerDeath(Event event, const char[] name, bool dontBroadcast
 	int useridClient = GetEventInt(event, "userid");
 	int client = GetClientOfUserId(useridClient);
 	
-	if(client <= 0 || client >= MaxClients)
+	if(client <= 0 || client > MaxClients)
 	{
 		return;
 	}
